@@ -1,4 +1,15 @@
-ENV['RACK_ENV'] = 'test'
+require_relative './setup_test_database'
+
+ENV['ENVIRONMENT'] = 'test'
+# ENV['RACK_ENV'] = 'test'
+
+RSpec.configure do |config|
+  config.before(:each) do
+    setup_test_database
+  end
+end
+#created a method called setup_test_database which is the code created in setup_test_database.rb
+#lines 6 to 10 block of code calls that method before each spec
 
 require File.join(File.dirname(__FILE__), '..', 'app.rb')
 
