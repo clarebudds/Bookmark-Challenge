@@ -9,7 +9,7 @@ RSpec.configure do |config|
   end
 end
 #created a method called setup_test_database which is the code created in setup_test_database.rb
-#lines 6 to 10 block of code calls that method before each spec
+#lines 6 to 10 block of code calls that method before each spec file
 
 require File.join(File.dirname(__FILE__), '..', 'app.rb')
 
